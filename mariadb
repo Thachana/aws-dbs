@@ -44,8 +44,8 @@ NEED TO CREATE RDS DB AND USE THAT FOR MIGRATION
 
 ### Migration of Database in EC2 Instance to RDS Database:
 ```bash
-mysqldump -u root -p mariadb > ec2db.sql
-mysql -h <replace-rds-end-point-here> -P 3306 -u admin -p rdsdb < ec2db.sql
+mysqldump -u root -p mariadb(db-name) > ec2db.sql
+mysql -h <replace-rds-end-point-here> -P 3306 -u admin -p rdsdb(db-name) < ec2db.sql
 mysql -h <replace-rds-end-point-here> -P 3306 -u admin -p
 USE rdsdb
 SELECT * FROM table1;
