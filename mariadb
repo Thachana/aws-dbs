@@ -27,7 +27,7 @@ echo "GRANT ALL PRIVILEGES ON *.* TO '${DBUser}'@'%';" >> /tmp/db.setup
 echo "FLUSH PRIVILEGES;" >> /tmp/db.setup
 mysqladmin -u root password "${DBRootPassword}"
 mysql -u root --password="${DBRootPassword}" < /tmp/db.setup
-rm /tmp/db.setup
+rm -rf /tmp/db.setup
 ```
 
 
